@@ -1,2 +1,6 @@
 /target
+# JetBrains IDE
 .idea/
+*.iml
+*.ipr
+*.iws

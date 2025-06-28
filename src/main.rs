@@ -2,6 +2,8 @@ use macroquad::prelude::*;
 use macroquad::rand::gen_range;
 use std::{thread, time::Duration};
 
+const THICKNESS: f32 = 1.0;
+
 fn window_conf() -> Conf {
     Conf {
         window_title: "Walker with Line Trail".to_owned(),
@@ -43,7 +45,7 @@ impl Walker {
         for i in 1..self.path.len() {
             let a = self.path[i - 1];
             let b = self.path[i];
-            draw_line(a.x, a.y, b.x, b.y, 1.0, WHITE);
+            draw_line(a.x, a.y, b.x, b.y, THICKNESS, WHITE);
         }
     }
 }
